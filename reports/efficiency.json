@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-10-01T23:15:15.226Z",
+  "rows": [
+    {
+      "name": "browser-qa",
+      "main": 549,
+      "refWords": 168,
+      "refs": 2,
+      "contracts": 4,
+      "pointerTokens": 66
+    },
+    {
+      "name": "environment-audit",
+      "main": 498,
+      "refWords": 168,
+      "refs": 1,
+      "contracts": 4,
+      "pointerTokens": 72
+    },
+    {
+      "name": "frontend-director",
+      "main": 924,
+      "refWords": 238,
+      "refs": 5,
+      "contracts": 5,
+      "pointerTokens": 73
+    },
+    {
+      "name": "master-orchestrator",
+      "main": 621,
+      "refWords": 122,
+      "refs": 1,
+      "contracts": 4,
+      "pointerTokens": 68
+    },
+    {
+      "name": "premium-web",
+      "main": 503,
+      "refWords": 108,
+      "refs": 1,
+      "contracts": 4,
+      "pointerTokens": 67
+    },
+    {
+      "name": "project-bootstrap",
+      "main": 480,
+      "refWords": 139,
+      "refs": 2,
+      "contracts": 5,
+      "pointerTokens": 68
+    },
+    {
+      "name": "public-repo-gate",
+      "main": 578,
+      "refWords": 186,
+      "refs": 2,
+      "contracts": 5,
+      "pointerTokens": 75
+    },
+    {
+      "name": "ship-gate",
+      "main": 570,
+      "refWords": 102,
+      "refs": 1,
+      "contracts": 5,
+      "pointerTokens": 57
+    },
+    {
+      "name": "skill-auditor",
+      "main": 571,
+      "refWords": 248,
+      "refs": 2,
+      "contracts": 5,
+      "pointerTokens": 76
+    },
+    {
+      "name": "token-governor",
+      "main": 460,
+      "refWords": 133,
+      "refs": 2,
+      "contracts": 4,
+      "pointerTokens": 57
+    },
+    {
+      "name": "ui-library-router",
+      "main": 453,
+      "refWords": 161,
+      "refs": 2,
+      "contracts": 5,
+      "pointerTokens": 63
+    },
+    {
+      "name": "vibe-mode",
+      "main": 576,
+      "refWords": 159,
+      "refs": 2,
+      "contracts": 4,
+      "pointerTokens": 64
+    }
+  ],
+  "totals": {
+    "skills": 12,
+    "main_words": 6783,
+    "reference_words": 1932,
+    "approx_global_description_tokens": 806,
+    "contracts": 54
+  }
+}

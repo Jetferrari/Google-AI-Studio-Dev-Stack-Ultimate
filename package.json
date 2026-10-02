@@ -1,0 +1,22 @@
+{
+  "name": "google-ai-studio-dev-stack",
+  "version": "1.0.0-ultimate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate:skills": "node scripts/validate-skills.mjs",
+    "validate:provenance": "node scripts/validate-provenance.mjs",
+    "validate:contracts": "node scripts/contract-coverage.mjs",
+    "test:scripts": "node --test tests/scripts/*.test.mjs",
+    "privacy": "node scripts/privacy-scan.mjs",
+    "build:dist": "node scripts/build-dist.mjs",
+    "report:efficiency": "node scripts/measure-efficiency.mjs",
+    "report:quality": "node scripts/quality-report.mjs",
+    "manifest": "node scripts/release-manifest.mjs",
+    "test": "npm run validate:skills && npm run validate:provenance && npm run validate:sources && npm run validate:contracts && npm run test:scripts",
+    "validate:release": "npm test && npm run build:dist && npm run report:efficiency && npm run report:quality && npm run manifest && npm run privacy && npm run manifest:files && npm run verify:files",
+    "validate:sources": "node scripts/validate-source-lock.mjs",
+    "manifest:files": "node scripts/file-manifest.mjs",
+    "verify:files": "node scripts/verify-file-manifest.mjs"
+  }
+}

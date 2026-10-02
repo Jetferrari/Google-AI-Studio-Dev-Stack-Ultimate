@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0-ultimate",
+  "generated_at": "2026-10-01T23:15:15.466Z",
+  "owned_skills": [
+    "browser-qa",
+    "environment-audit",
+    "frontend-director",
+    "master-orchestrator",
+    "premium-web",
+    "project-bootstrap",
+    "public-repo-gate",
+    "ship-gate",
+    "skill-auditor",
+    "token-governor",
+    "ui-library-router",
+    "vibe-mode"
+  ],
+  "adapted_skills": [],
+  "validation_levels_claimed": [
+    "A-structural",
+    "B-tooling",
+    "C-contract-specification"
+  ],
+  "behavioral_model_eval_level_D": false,
+  "third_party_vendored": 0
+}

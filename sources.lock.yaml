@@ -1,0 +1,22 @@
+version: 1
+sources:
+  matt-pocock-skills:
+    repository: https://github.com/mattpocock/skills
+    revision: d81f3a183412e71a5b1e84ca21bc1a35eea03a60
+    license: MIT
+    mode: planned-adapted
+  motion-site-builder:
+    repository: https://github.com/olbboy/motion-site-builder
+    revision: a0e1cad6aeac73283400df791869a5c7443e49c7
+    license: MIT
+    mode: quarantine-adaptation
+  vercel-agent-skills:
+    repository: https://github.com/vercel-labs/agent-skills
+    revision: 063bee94c3f4df8453406c830b0a7df0f2860278
+    license: MIT
+    mode: upstream
+  google-gemini-skills:
+    repository: https://github.com/google-gemini/gemini-skills
+    revision: 6fee1bec62d6a0ca92c1d0e34d62ff11f70c498a
+    license: Apache-2.0
+    mode: upstream
