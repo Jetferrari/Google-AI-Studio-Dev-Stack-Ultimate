@@ -13,3 +13,7 @@ For each selected contract fixture:
 7. use a fresh session for the next independent case when context contamination would matter.
 
 A manual run is Level D evidence only for the exact model/harness/settings recorded. Do not generalize it to other models or future aliases.
+
+## Recorded runs
+
+- `2026-10-01-ai-studio-build-gemini-3.8-flash.md` — four routing/execution scenarios: `frontend-director`, no-skill boundary, `environment-audit`, and `vibe-mode`.
