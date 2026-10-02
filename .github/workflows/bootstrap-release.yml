@@ -1,0 +1,60 @@
+name: Bootstrap validated ultimate stack
+
+on:
+  push:
+    paths:
+      - ".bootstrap/READY"
+
+permissions:
+  contents: write
+
+jobs:
+  import-release:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout staging repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reassemble release bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .bootstrap/bundle.part{01..06} | base64 -d > /tmp/google-ai-studio-dev-stack.tar.gz
+          mkdir -p /tmp/release
+          tar -xzf /tmp/google-ai-studio-dev-stack.tar.gz -C /tmp/release
+          test -f /tmp/release/google-ai-studio-dev-stack/package.json
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate packaged release before import
+        shell: bash
+        working-directory: /tmp/release/google-ai-studio-dev-stack
+        run: |
+          set -euo pipefail
+          npm test
+          npm run privacy
+          npm run build:dist
+          node scripts/verify-file-manifest.mjs
+
+      - name: Import release and remove bootstrap machinery
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp -a /tmp/release/google-ai-studio-dev-stack/. .
+          rm -rf .bootstrap
+          rm -f .github/workflows/bootstrap-release.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "chore: import v1.0.0 ultimate stack"
+          git push origin HEAD:main
