@@ -22,7 +22,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .bootstrap/bundle.part{01..06} | base64 -d > /tmp/google-ai-studio-dev-stack.tar.gz
+          cat             .bootstrap/bundle.part01             .bootstrap/bundle.part02             .bootstrap/bundle.part03.1             .bootstrap/bundle.part03.2             .bootstrap/bundle.part03.3             .bootstrap/bundle.part04             .bootstrap/bundle.part05             .bootstrap/bundle.part06             | base64 -d > /tmp/google-ai-studio-dev-stack.tar.gz
           mkdir -p /tmp/release
           tar -xzf /tmp/google-ai-studio-dev-stack.tar.gz -C /tmp/release
           test -f /tmp/release/google-ai-studio-dev-stack/package.json
